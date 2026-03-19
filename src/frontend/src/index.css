@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("/assets/fonts/BricolageGrotesque.woff2") format("woff2");
+  font-weight: 200 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("/assets/fonts/PlusJakartaSans.woff2") format("woff2");
+  font-weight: 300 700;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: dark;
+
+  --background: oklch(0.11 0.022 285);
+  --foreground: oklch(0.96 0.008 285);
+  --card: oklch(0.16 0.025 285);
+  --card-foreground: oklch(0.96 0.008 285);
+  --popover: oklch(0.16 0.025 285);
+  --popover-foreground: oklch(0.96 0.008 285);
+  --primary: oklch(0.68 0.27 295);
+  --primary-foreground: oklch(0.99 0.005 285);
+  --secondary: oklch(0.22 0.03 285);
+  --secondary-foreground: oklch(0.9 0.01 285);
+  --muted: oklch(0.22 0.025 285);
+  --muted-foreground: oklch(0.62 0.025 285);
+  --accent: oklch(0.72 0.23 10);
+  --accent-foreground: oklch(0.99 0.005 285);
+  --destructive: oklch(0.62 0.22 25);
+  --destructive-foreground: oklch(0.99 0.005 285);
+  --success: oklch(0.72 0.19 145);
+  --warning: oklch(0.8 0.18 70);
+  --border: oklch(0.26 0.03 285);
+  --input: oklch(0.22 0.03 285);
+  --ring: oklch(0.68 0.27 295);
+  --radius: 0.75rem;
+}
+
+html,
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Instagram gradient utilities */
+.ig-gradient {
+  background: linear-gradient(
+    135deg,
+    oklch(0.68 0.27 295) 0%,
+    oklch(0.68 0.27 350) 40%,
+    oklch(0.72 0.23 45) 100%
+  );
+}
+
+.ig-gradient-text {
+  background: linear-gradient(
+    135deg,
+    oklch(0.75 0.27 295) 0%,
+    oklch(0.75 0.27 350) 40%,
+    oklch(0.8 0.23 50) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.ig-border {
+  border: 1px solid transparent;
+  background: linear-gradient(var(--card), var(--card)) padding-box,
+    linear-gradient(
+      135deg,
+      oklch(0.68 0.27 295),
+      oklch(0.68 0.27 350),
+      oklch(0.72 0.23 45)
+    )
+    border-box;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: oklch(0.14 0.02 285);
+}
+::-webkit-scrollbar-thumb {
+  background: oklch(0.3 0.04 285);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: oklch(0.4 0.06 285);
+}
