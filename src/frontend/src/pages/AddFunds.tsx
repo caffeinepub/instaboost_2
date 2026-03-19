@@ -123,7 +123,7 @@ export default function AddFunds() {
             <CardContent className="space-y-4">
               <div className="rounded-xl overflow-hidden border border-border bg-white p-2">
                 <img
-                  src="/assets/uploads/IMG_1629-1.jpeg"
+                  src="/assets/uploads/IMG_1629-1-1.jpeg"
                   alt="Payment QR Code"
                   className="w-full h-48 object-contain rounded-lg"
                   data-ocid="add_funds.qr.card"
